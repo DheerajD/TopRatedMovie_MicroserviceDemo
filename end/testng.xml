@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Java - Module Movie">
+<test name="Main">
+    <classes>
+        <class name="com.dheerajdoodhya.moviebooking.MainTests"/>
+        <methods>
+            <include name="testGetTopRatedMovie" alias="Top rated movie returned successfully"/>
+        </methods>
+    </classes>
+</test>
+</suite>

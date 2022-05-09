@@ -1,0 +1,26 @@
+type: editor
+# showTerminals should be true if the exercise is terminal based i.e. the output is seen on the terminal
+showTerminals: true 
+# showExplorer must always be set to true to ensure a file explorer interface is shown to the user
+showExplorer: true
+# Setting preview to true will enable a browser pane in case the exercise involves serving HTML. For terminal based
+# exercises, please set it to false
+preview: false
+enableRun: true
+testFramework: testng
+# The exercise environment on Prism is a lot like VSCode. The openFiles parameter allows you to set multiple files that would be kept open when the exercise loads up. Please configure this as per your exercise files.
+openFiles:
+  - /Main.java
+# We provide two terminals. The 'Your Result' terminal runs and displays the output of the learner's effort, while the 'Expected Result' terminal displays the outcome of the completed exercise in the 'end' folder. 
+terminals:
+  - name: Your Result
+    # These are consecutive commands which will be executed when the user hits the 'Run' button shown on the UI. This executes the exercise code on the 'You Result' terminal. You are free to configure these. 
+    commands:
+       - javac *.java
+       - java Main
+  - name: Expected Result
+    # These are a set of commands that the 'Expected Result' terminal executes. You are free to configure these. 
+    commands:
+      - cd ../end
+      - javac *.java
+      - java Main
